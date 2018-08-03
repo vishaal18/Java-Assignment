@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <context-param>
+        <param-name>Question2</param-name>
+        <param-value>"I can access the context parameter"</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>FamousQuoteServlet</servlet-name>
+        <servlet-class>Controller.FamousQuoteServlet</servlet-class>
+        <init-param>
+            <param-name>Quote</param-name>
+            <param-value>"Put your hand on a hot stove for a minute and it feels like an hour. Sit with a pretty
+            girl for an hour, it seems like a minute</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FamousQuoteServlet</servlet-name>
+        <url-pattern>/famousquote</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>GreetingServlet</servlet-name>
+    <servlet-class>Controller.GreetingServlet</servlet-class>
+        <init-param>
+            <param-name>Greetings</param-name>
+            <param-value>"Happy Birthday"</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GreetingServlet</servlet-name>
+        <url-pattern>/greeting</url-pattern>
+    </servlet-mapping>
+</web-app>
